@@ -19,7 +19,7 @@ struct ContentView: View {
     @State private var numberOfTimesPlayed = 0
     @State private var ladybugRandomNumber = 0
     @State private var antRandomNumber = 0
-    
+
     var body: some View {
         VStack {
             Spacer()
@@ -48,7 +48,7 @@ struct ContentView: View {
                     ladybugRandomNumber = Int.random(in: 1...999)
                     antRandomNumber = Int.random(in: 1...999)
                     numberOfTimesPlayed += 1
-                    
+
                     if ladybugRandomNumber > randomNumber {
                         ladybugScore += 1
                     } else if antRandomNumber > randomNumber {
@@ -68,6 +68,6 @@ struct ContentView: View {
             Spacer()
             Text("Number of times played: \(numberOfTimesPlayed)")
         }
-        .padding()
+            .padding()
     }
 }
